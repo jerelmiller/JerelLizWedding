@@ -4,6 +4,7 @@ $walkway_path: url(Walkway_SemiBold-webfont.eot), url(Walkway_SemiBold-webfont.s
 $existence_path: url(Existence-UnicaseLight-webfont.eot), url(Existence-UnicaseLight-webfont.svg), url(Existence-UnicaseLight-webfont.ttf), url(Existence-UnicaseLight-webfont.woff);
 $purple: #5B3863;
 $grey: #3D3D3D;
+$lightGrey: #545454;
 
 // Mixins
 @mixin transition($property, $duration: 0.5s, $easing: linear) {
@@ -83,6 +84,10 @@ a {
         right: 40px;
         padding-left: 40px;
         display: block;
+        @include transition(background, 0.1s);
+        &:hover {
+          background: rgba($lightGrey, 0.6);
+        }
       }
     }
   }
