@@ -70,14 +70,14 @@ a {
     padding: 40px;
     margin-left: -25px;
     @include border-radius(50%);
+  }
+  div {
+    margin-bottom: 10px;
     .move {
       position: relative;
       left: 6px;
       top: 2px;
     }
-  }
-  div {
-    margin-bottom: 10px;
     &.marginSmall {
       margin-bottom: 8px;
     }
