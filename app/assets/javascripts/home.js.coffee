@@ -5,7 +5,7 @@ $ ->
   if width < 400
     num_tiles = 1
     width = 400
-  else if width < 800
+  else if width < 870
     num_tiles = 2
   else if width < 1200
     num_tiles = 3
@@ -46,7 +46,7 @@ $ ->
       if width < 400
         num_tiles = 1
         width = 400
-      else if width < 800
+      else if width < 870
         num_tiles = 2
       else if width < 1200
         num_tiles = 3
