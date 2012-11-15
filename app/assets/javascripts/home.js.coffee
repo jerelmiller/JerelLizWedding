@@ -3,8 +3,10 @@ $ ->
   num_tiles = 4
 
   if width < 400
-    num_tiles = 1
     width = 400
+
+  if width < 470
+    num_tiles = 1
   else if width < 870
     num_tiles = 2
   else if width < 1200
@@ -14,8 +16,8 @@ $ ->
   newHeight = newWidth * 0.56
 
   $('.crop').width(newWidth)
-  $('.crop img').width(newWidth)
   $('.crop').height(newHeight)
+  $('.crop img').width(newWidth)
   # Ensure that resizing won't make the tiles arrange right away
   $('.imageContainer').css('width', width)
 
@@ -44,8 +46,10 @@ $ ->
       num_tiles = 4
 
       if width < 400
-        num_tiles = 1
         width = 400
+
+      if width < 470
+        num_tiles = 1
       else if width < 870
         num_tiles = 2
       else if width < 1200
