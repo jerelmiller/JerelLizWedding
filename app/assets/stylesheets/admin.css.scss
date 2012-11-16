@@ -16,6 +16,7 @@ body.admin {
   width: 100%;
   background: $grey;
   padding: 20px 0;
+  height: 70px;
   .logo {
     margin-left: 0;
     padding: 10px;
@@ -51,6 +52,7 @@ body.admin {
   margin-left: 0;
   color: #000;
   font-family: Raleway, Helvetica, sans-serif;
+  margin-top: 30px;
 }
 
 input[type=text], input[type=password] {
@@ -102,14 +104,23 @@ form {
   }
 }
 
+.navbar {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+}
+
+.dropdown-toggle, ul.adminMenu {
+  font-size: 25px;
+}
+
 ul.adminMenu {
   float: right;
   list-style-type: none;
   position: absolute;
-  bottom: 0;
-  right: 30px;
+  bottom: 50px;
+  right: 220px;
   margin: 0;
-  font-size: 25px;
   li {
     display: inline-block;
     margin-left: 50px;
