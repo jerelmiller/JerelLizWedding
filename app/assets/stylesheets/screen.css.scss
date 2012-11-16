@@ -20,11 +20,15 @@ $lightGrey: #545454;
   border-radius: $radius;
 }
 
+@font-face {
+  font-family: Crew;
+  src: $crew_path;
+}
 
-// @font-face {
-//   font-family: Crew;
-//   src: $crew_path;
-// }
+@font-face {
+  font-family: Walkway;
+  src: $walkway_path;
+}
 
 @font-face {
   font-family: Raleway;
@@ -36,14 +40,11 @@ $lightGrey: #545454;
   src: $existence_path;
 }
 
-// @font-face {
-//   font-family: Walkway;
-//   src: $walkway_path;
-// }
 
 html, body {
   margin: 0;
   padding: 0;
+  font-family: Crew, Helvetica, sans-serif;
 }
 
 a {
@@ -51,29 +52,19 @@ a {
   color: white;
 }
 
-
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 200px;
+.logo {
+  font-size: 50px;
+  margin: 0 auto;
+  width: 165px;
+  background: $purple;
   padding: 40px;
-  background: $grey;
-  font-family: Raleway, Helvetica, sans-serif;
+  margin-left: -25px;
+  @include border-radius(50%);
   color: white;
-  .logo {
-    font-size: 50px;
-    margin: 0 auto;
-    width: 165px;
-    background: $purple;
-    padding: 40px;
-    margin-left: -25px;
-    @include border-radius(50%);
-  }
+  font-family: Raleway, Helvetica, sans-serif;
   div {
     margin-bottom: 10px;
-    .move {
+    &.move {
       position: relative;
       left: 6px;
       top: 2px;
@@ -88,7 +79,28 @@ a {
       font-size: 40px;
     }
   }
+}
 
+.alert {
+  padding: 20px 40px 15px 20px;
+  font-family: Crew, Helvetica, sans-serif;
+}
+
+i {
+  position: relative;
+  top: 2px;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  padding: 40px;
+  background: $grey;
+  font-family: Raleway, Helvetica, sans-serif;
+  color: white;
   ul.menu {
     margin-top: 50px;
     list-style-type: none;

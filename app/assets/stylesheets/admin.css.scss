@@ -1,0 +1,102 @@
+$grey: #3D3D3D;
+$purple: #5B3863;
+$lightGrey: #CCC;
+
+@mixin border-radius($radius: 10px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body.admin {
+  background: $lightGrey;
+}
+
+.header {
+  width: 100%;
+  background: $grey;
+  padding: 20px 0;
+  .logo {
+    margin-left: 0;
+    padding: 10px;
+    width: 130px;
+    float: left;
+    @include border_radius(5px);
+    .marginSmall {
+      margin-bottom: 8px;
+      font-size: 30px;
+    }
+    .small {
+      font-size: 18px;
+    }
+    .medium {
+      font-size: 25px;
+    }
+    .move {
+      top: 7px;
+      left: 16px;
+    }
+  }
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.admin.content {
+  font-size: 20px;
+  padding: 20px 0;
+  margin-left: 0;
+  color: #000;
+  font-family: Raleway, Helvetica, sans-serif;
+}
+
+input[type=text], input[type=password] {
+  padding: 15px 10px;
+  width: 300px;
+}
+
+form {
+  label {
+    width: 200px;
+    font-size: 25px;
+    margin-top: 20px;
+    float: left;
+    margin-right: 20px;
+    text-align: right;
+    &.passConfirm {
+      margin-top: 10px;
+    }
+  }
+  .submit {
+    margin-left: 220px;
+    input[type=submit] {
+      padding: 15px 10px 10px;
+      @include border-radius(2px);
+      background: lighten($purple, 10%);
+      font-family: Raleway, Helvetica, sans-serif;
+      font-weight: bold;
+      border: 0;
+      color: white;
+      line-height: 25px;
+      &:hover {
+        background: lighten($purple, 15%);
+      }
+    }
+  }
+}
+
+.formContainer {
+  padding: 20px;
+  background: white;
+  border: 1px solid #ABABAB;
+  @include border_radius(2px);
+  .formHeader {
+    font-size: 35px;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
