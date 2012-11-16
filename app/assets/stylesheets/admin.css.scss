@@ -42,6 +42,7 @@ body.admin {
 .container {
   width: 960px;
   margin: 0 auto;
+  position: relative;
 }
 
 .admin.content {
@@ -98,5 +99,19 @@ form {
     border-bottom: 1px solid #CCC;
     padding-bottom: 20px;
     margin-bottom: 20px;
+  }
+}
+
+ul.adminMenu {
+  float: right;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  margin: 0;
+  font-size: 25px;
+  li {
+    display: inline-block;
+    margin-left: 50px;
   }
 }
