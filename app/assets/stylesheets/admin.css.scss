@@ -8,6 +8,13 @@ $lightGrey: #CCC;
   border-radius: $radius;
 }
 
+@mixin transition($property, $duration: 0.5s, $easing: linear) {
+  -webkit-transition: $property $duration $easing;
+  -moz-transition: $property $duration $easing;
+  -o-transition: $property $duration $easing;
+  transition: $property $duration $easing;
+}
+
 body.admin {
   background: $lightGrey;
 }
@@ -104,25 +111,40 @@ form {
   }
 }
 
-.navbar {
-  position: absolute;
-  bottom: 20px;
-  right: 0px;
+.navbar .nav {
+  // position: absolute;
+  // top: 10px;
+  // // bottom: 20px;
+  // right: 0;
+  margin-right: -15px;
 }
 
-.dropdown-toggle, ul.adminMenu {
-  font-size: 25px;
+.navbar {
+  position: absolute;
+  top: -10px;
+  right: 0;
 }
 
 ul.adminMenu {
   float: right;
   list-style-type: none;
   position: absolute;
-  bottom: 50px;
-  right: 220px;
+  bottom: 33px;
+  right: 0px;
   margin: 0;
+  font-size: 30px;
   li {
     display: inline-block;
-    margin-left: 50px;
+    a {
+      display: block;
+      width: 160px;
+      text-align: center;
+      padding: 8px 5px;
+      @include transition(all, .1s);
+      &:hover {
+        background: $lightGrey;
+        color: black;
+      }
+    }
   }
 }
