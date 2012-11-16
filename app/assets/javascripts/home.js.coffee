@@ -41,7 +41,10 @@ $ ->
 
   $(window).resize ->
 
-    setTimeout ->
+    if this.resizeTO
+      clearTimeout(this.resizeTO)
+
+    this.resizeTO = setTimeout ->
       width = $(window).width() - $('.sidebar').outerWidth()
       num_tiles = 4
 
@@ -71,5 +74,4 @@ $ ->
       $('.imageContainer').animate
         width: width
       , 100
-
-    , 700
+    , 400
