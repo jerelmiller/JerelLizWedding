@@ -1,0 +1,10 @@
+= form_for [:admin, @image], url: admin_images_path, html: { multipart: true } do |f|
+  = render 'layouts/flash', flash: flash
+  .input
+    %label Image
+    = f.file_field :image
+  .input
+    %label Image Title
+    = f.text_field :title
+  .submit
+    = f.submit 'Update', class: 'btn btn-primary btn-large'

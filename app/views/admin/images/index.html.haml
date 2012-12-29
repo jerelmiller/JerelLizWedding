@@ -1,0 +1,7 @@
+.imageContainerHeader
+  = link_to 'Upload a new photo', new_admin_image_path, class: 'button'
+
+.imageContainer
+  - @images.each do |image|
+    .cropSmall.left{ class: cycle('first', '', '', '') }
+      = image_tag image.image.url(:thumb)

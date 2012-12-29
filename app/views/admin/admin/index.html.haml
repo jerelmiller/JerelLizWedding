@@ -1,1 +1,11 @@
-%h1 In Admin
+= render 'layouts/flash', flash: flash
+
+.recentImagesHeader
+  %h2 Some recently uploaded images
+  = link_to 'Upload a new photo', new_admin_image_path, class: 'button'
+  .clear
+
+.recentImages
+  - @recent_images.each do |image|
+    .cropSmall.left
+      = image_tag image.image.url(:thumb)

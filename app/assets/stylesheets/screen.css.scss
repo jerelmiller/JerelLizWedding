@@ -5,6 +5,7 @@ $existence_path: url(Existence-UnicaseLight-webfont.eot), url(Existence-UnicaseL
 $purple: #5B3863;
 $grey: #3D3D3D;
 $lightGrey: #545454;
+$offWhite: #EFEFEF;
 
 // Mixins
 @mixin transition($property, $duration: 0.5s, $easing: linear) {
@@ -52,6 +53,10 @@ a {
   color: white;
 }
 
+body {
+  background: $offWhite;
+}
+
 .logo {
   font-size: 50px;
   margin: 0 auto;
@@ -89,6 +94,14 @@ a {
 i {
   position: relative;
   top: 2px;
+}
+
+.imageContainer {
+  h1 {
+    width: 90%;
+    margin: 100px auto;
+    text-align: center;
+  }
 }
 
 .sidebar {

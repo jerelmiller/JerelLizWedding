@@ -1,6 +1,7 @@
 .imageContainer
-  .crop
-    = link_to image_tag('snow.jpg'), '#', 'data-title' => 'Pre-engagement Picture with a long title that could drag on a while'.upcase
-  .crop= link_to image_tag('ring.jpg'), '#', 'data-title' => 'The ring'.upcase
-  .crop= link_to image_tag('snow.jpg'), '#', 'data-title' => 'Pre-engagement Picture'.upcase
-  .crop= link_to image_tag('ring.jpg'), '#', 'data-title' => 'The ring'.upcase
+  - if @images.length.eql? 0
+    %h1 We currently have no images to display. Don't sweat! We will be uploading some shortly.
+
+
+  - @images.each do |image|
+    .crop= link_to image_tag(image.image.url(:regular)), image.image.url(:large), 'data-title' => image.title.upcase, rel: 'lightbox[images]', title: image.title

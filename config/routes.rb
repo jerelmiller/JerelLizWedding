@@ -9,6 +9,7 @@ Wedding::Application.routes.draw do
 
   namespace :admin do
     resource :users, :only => [:edit, :update]
+    resources :images
     root :to => 'admin#index'
   end
 

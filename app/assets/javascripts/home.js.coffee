@@ -18,15 +18,20 @@ $ ->
   $('.crop').width(newWidth)
   $('.crop').height(newHeight)
   $('.crop img').width(newWidth)
-  # Ensure that resizing won't make the tiles arrange right away
-  $('.imageContainer').css('width', width)
+  $('body:not(.admin) .imageContainer').width(width)
+
+  $('.crop img').each ->
+    $(@).load ->
+      if @.height < newHeight
+        $(@).height(newHeight)
 
   $('.crop').hover ->
-    title = $(this).find('a').data('title')
-    href = $(this).find('a').prop('href')
+    $a = $(this).find('a')
+    title = $a.data('title')
+    href = $a.attr('href')
 
     $(this).find('img').fadeTo(150, 0.1)
-    $(this).append("<a class='imageTitle' href='#{href}'>#{title}</a>")
+    $(this).append("<a class='imageTitle' rel='lightbox[images]' href='#{href}' data-ignore-lightbox='true'>#{title}</a>")
 
     $imageTitle = $(this).find('a.imageTitle')
     titleWidth = $imageTitle.width()
@@ -71,7 +76,7 @@ $ ->
         width: newWidth
       , 100
 
-      $('.imageContainer').animate
+      $('body:not(.admin) .imageContainer').animate
         width: width
       , 100
     , 400
