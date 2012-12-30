@@ -1,6 +1,7 @@
 $grey: #3D3D3D;
 $purple: #5B3863;
 $lightGrey: #CCC;
+$offwhite: #EFEFEF;
 
 @mixin border-radius($radius: 10px) {
   -webkit-border-radius: $radius;
@@ -13,6 +14,12 @@ $lightGrey: #CCC;
   -moz-transition: $property $duration $easing;
   -o-transition: $property $duration $easing;
   transition: $property $duration $easing;
+}
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 2px, $spread: 2px, $color: #555) {
+  -webkit-box-shadow: $x $y $blur $spread $color;
+  -moz-box-shadow: $x $y $blur $spread $color;
+  box-shadow: $x $y $blur $spread $color;
 }
 
 body.admin {
@@ -49,6 +56,10 @@ body.admin {
 
 .left {
   float: left;
+}
+
+.right {
+  float: right;
 }
 
 .clear {
@@ -148,16 +159,55 @@ body.admin {
   .imageContainer {
     .cropSmall {
       height: 120px;
-      width: 230px;
+      width: 220px;
       overflow: hidden;
-      margin: 0 0 10px 10px;
+      margin: 0 0 20px 20px;
       position: relative;
       z-index: 1;
-      img {
-        width: 230px;
+      @include transition(box-shadow, 0.2s);
+      @include transition(background, 0.2s);
+      &.hover {
+        padding: 20px 20px 10px;
       }
       &.first {
         margin-left: 0;
+      }
+      &:hover {
+        // padding: 20px 20px 10px;
+        background: #FFF;
+        @include box-shadow(0, 0, 4px, 1px);
+      }
+      img {
+        width: 230px;
+      }
+      .caption {
+        margin: 10px 0 0;
+      }
+      .iconWrapper {
+        padding:  2px 3px;
+        margin-top: 5px;
+        &.pullLeft {
+          margin-left: -5px;
+        }
+        &.pullRight {
+          margin-right: -5px;
+        }
+        &:hover {
+          background: #6B80AE;
+        }
+      }
+      form {
+        padding: 0;
+        margin: 0;
+
+      }
+      textarea {
+        @include border-radius(0);
+        margin-top: 5px;
+        font-size: 13px;
+        padding: 5px;
+        width: 218px;
+        min-height: 40px;
       }
     }
   }

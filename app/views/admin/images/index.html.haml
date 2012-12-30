@@ -3,5 +3,5 @@
 
 .imageContainer
   - @images.each do |image|
-    .cropSmall.left{ class: cycle('first', '', '', '') }
-      = image_tag image.image.url(:thumb)
+    .cropSmall.left{ class: cycle('first', '', '', 'last'), 'data-caption' => image.title, 'data-image-id' => image.id }
+      = image_tag image.image.url(:thumb), alt: image.title
