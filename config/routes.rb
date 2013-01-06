@@ -6,6 +6,8 @@ Wedding::Application.routes.draw do
 
 
   root to: 'home#index'
+  get 'blog' => 'home#blog', as: 'blog'
+  get 'our-story' => 'home#our_story', as: 'our_story'
 
   namespace :admin do
     resource :users, only: [:edit, :update]

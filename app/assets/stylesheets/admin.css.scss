@@ -2,6 +2,7 @@ $grey: #3D3D3D;
 $purple: #5B3863;
 $lightGrey: #CCC;
 $offwhite: #EFEFEF;
+$mediumGrey: #545454;
 
 @mixin border-radius($radius: 10px) {
   -webkit-border-radius: $radius;
