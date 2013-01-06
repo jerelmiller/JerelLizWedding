@@ -25,32 +25,43 @@ $mediumGrey: #545454;
 
 body.admin {
   background: $lightGrey;
+  font-family: Crew, Helvetica, sans-serif;
 }
 
-.header {
-  width: 100%;
-  background: $grey;
-  padding: 20px 0;
-  height: 70px;
-  .logo {
-    margin-left: 0;
-    padding: 10px;
-    width: 130px;
-    float: left;
-    @include border_radius(5px);
-    .marginSmall {
-      margin-bottom: 8px;
-      font-size: 30px;
-    }
-    .small {
-      font-size: 18px;
-    }
-    .medium {
-      font-size: 25px;
-    }
-    .move {
-      top: 7px;
-      left: 16px;
+body.admin {
+  .header {
+    width: 100%;
+    background: $grey;
+    padding: 20px 0;
+    height: 70px;
+    .logo {
+      font-size: 50px;
+      margin: 0;
+      padding: 10px;
+      width: 130px;
+      float: left;
+      background: $purple;
+      color: white;
+      font-family: Raleway, Helvetica, sans-serif;
+      @include border_radius(5px);
+      div {
+        margin-bottom: 10px;
+        &.marginSmall {
+          margin-bottom: 8px;
+          font-size: 30px;
+        }
+        &.small {
+          font-size: 18px;
+        }
+        &.medium {
+          font-size: 25px;
+        }
+        &.move {
+          position: relative;
+          top: 7px;
+          left: 16px;
+        }
+      }
     }
   }
 }
