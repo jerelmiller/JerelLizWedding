@@ -17,3 +17,6 @@
 .DS_Store
 
 public/images
+
+# Ignore database.yml
+config/database.yml
