@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.11'
 gem 'haml'
 gem 'sorcery'
 gem 'paperclip'
 gem 'rmagick'
+gem 'paperclip-dropbox'
 
 
 # Gems used only for assets and not required
@@ -23,6 +24,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'sqlite3'
+  gem 'pry'
 end
 
 group :production do

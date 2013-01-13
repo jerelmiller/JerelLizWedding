@@ -88,6 +88,7 @@ $ ->
 
     $('.iconWrapper.delete').click ->
       $form = $this.find('form')
+      $this.addClass('disabled')
       if confirm('Are you sure you want to delete that photo?')
         $.ajax
           url: $form.attr('action')
@@ -108,10 +109,10 @@ $ ->
 
     imgHeight = $this.find('img').height()
     captionHeight = $this.find('.caption').outerHeight()
-    pencilHeight = $this.find('.icon-pencil').outerHeight()
+    pencilHeight = $this.find('.iconWrapper').outerHeight()
     $this.animate
       height: imgHeight + captionHeight + pencilHeight
-    , 200, ->
+    , 150, ->
       $this.css('height', 'auto')
 
   , ->
