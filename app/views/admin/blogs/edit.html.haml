@@ -1,0 +1,6 @@
+- content_for :title do
+  = "Editing Blog"
+
+.formContainer
+  .formHeader= "Editing #{@blog.title}"
+  = render 'form'

@@ -98,6 +98,11 @@ input[type=text], input[type=password], input[type=file] {
   width: 300px;
 }
 
+textarea {
+  padding: 15px 10px;
+  width: 500px;
+}
+
 input[type=file] {
   font-size: 16px;
 }
@@ -160,7 +165,7 @@ form {
   }
 }
 
-.imageContainerHeader {
+.pageContainerHeader {
   margin: 20px 0;
   .button {
     font-size: 14px;

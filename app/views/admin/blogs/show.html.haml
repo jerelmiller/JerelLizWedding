@@ -1,0 +1,6 @@
+.pageHeaderContainer
+  = link_to 'Edit Blog', edit_admin_blog_path(@blog), class: 'button'
+
+= image_tag @blog.cover_photo.url(:original)
+%h1= @blog.title
+%p= @blog.body.html_safe

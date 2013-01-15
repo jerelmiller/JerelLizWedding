@@ -7,7 +7,7 @@ class Image < ActiveRecord::Base
     dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
     styles: { regular: "500x500>", thumb: "200x200>", large: "700x700>" },
     dropbox_options: {
-      path: proc { |style| "#{Rails.env}/#{style}/#{id}/#{image.original_filename}"}
+      path: proc { |style| "#{Rails.env}/images/#{style}/#{id}/#{image.original_filename}"}
     }
 
   validates_attachment :image, presence: { message: 'must be present' },

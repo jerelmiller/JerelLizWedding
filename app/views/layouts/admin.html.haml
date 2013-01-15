@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title= content_for?(:title) ? yield(:title) : "Jerel and Liz"
+    %title= content_for?(:title) ? "Jerel and Liz - #{yield(:title)}" : "Jerel and Liz"
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags

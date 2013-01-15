@@ -1,0 +1,13 @@
+= form_for [:admin, @blog], url: admin_blog_path, html: { multipart: true } do |f|
+  = render 'layouts/flash', flash: flash
+  .input
+    %label Cover Photo
+    = f.file_field :cover_photo
+  .input
+    %label Title
+    = f.text_field :title
+  .input
+    %label Body
+    = f.text_area :body
+  .submit
+    = f.submit 'Update blog', class: 'btn btn-primary btn-large'
