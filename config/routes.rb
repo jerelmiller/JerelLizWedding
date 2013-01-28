@@ -1,5 +1,7 @@
 Wedding::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   get 'login' => 'sessions#new'
   get 'logout' => 'sessions#destroy'
   resources :sessions, only: :create

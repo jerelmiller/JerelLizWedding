@@ -6,6 +6,7 @@ gem 'sorcery'
 gem 'paperclip'
 gem 'rmagick'
 gem 'paperclip-dropbox'
+gem 'ckeditor'
 
 
 # Gems used only for assets and not required

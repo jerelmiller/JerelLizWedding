@@ -23,7 +23,7 @@ class Admin::BlogsController < Admin::AdminController
       flash[:success] = "Successfully created blog"
       redirect_to admin_blogs_path
     else
-      flash[:error] = @blog.errors.full_messages
+      flash[:error] = @blog.errors.full_messages.join(', ')
       render :new
     end
 

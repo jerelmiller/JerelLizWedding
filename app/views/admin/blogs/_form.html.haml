@@ -1,4 +1,4 @@
-= form_for [:admin, @blog], url: admin_blog_path, html: { multipart: true } do |f|
+= form_for [:admin, @blog], html: { multipart: true } do |f|
   = render 'layouts/flash', flash: flash
   .input
     %label Cover Photo
@@ -6,8 +6,10 @@
   .input
     %label Title
     = f.text_field :title
+  / %label Body
   .input
-    %label Body
-    = f.text_area :body
+    / .left Body
+    = f.cktext_area :body, class: 'left', ckeditor: {  }
+    / = f.text_area :body
   .submit
     = f.submit 'Update blog', class: 'btn btn-primary btn-large'

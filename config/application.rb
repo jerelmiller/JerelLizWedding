@@ -57,6 +57,9 @@ module Wedding
     config.assets.enabled = true
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
+    # Autoload ckeditor
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
     # Don't bootstrap application assets
     config.assets.initialize_on_precompile = false
 
