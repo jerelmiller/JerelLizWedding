@@ -1,6 +1,10 @@
-.pageHeaderContainer
-  = link_to 'Edit Blog', edit_admin_blog_path(@blog), class: 'button'
+.pageContainerHeader
+  = link_to 'Back to blogs', admin_blogs_path, class: 'button'
 
-= image_tag @blog.cover_photo.url(:original)
-%h1= @blog.title
-%p= @blog.body.html_safe
+.blog
+  %h2.title
+    = @blog.title
+    = link_to edit_admin_blog_path(@blog) do
+      %i.icon-pencil
+  = image_tag @blog.cover_photo.url(:large), class: 'cover_photo' unless @blog.cover_photo.blank?
+  %p= @blog.body.html_safe

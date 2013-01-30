@@ -1,7 +1,9 @@
 class Admin::BlogsController < Admin::AdminController
+  before_filter :set_previous_path, only: [:new, :edit]
+  helper_method :previous_path
   
   def index
-    @blogs = Blog.all
+    @blogs = Blog.order('created_at desc')
   end
 
   def new
@@ -39,6 +41,16 @@ class Admin::BlogsController < Admin::AdminController
       flash[:error] = @blog.errors.full_messages.join('<br/>')
       render :edit
     end
+  end
+
+  def previous_path
+    session[:return_to]
+  end
+
+private
+
+  def set_previous_path
+    session[:return_to] = request.referer
   end
 
 end

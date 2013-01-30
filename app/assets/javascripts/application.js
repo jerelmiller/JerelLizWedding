@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require lightbox
 //= require ckeditor/init
+//= require bootstrap
+//= require jquery.isotope.min
 //= require_tree .

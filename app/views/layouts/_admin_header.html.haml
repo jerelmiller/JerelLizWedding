@@ -1,6 +1,6 @@
 .header
   .container
-    = link_to admin_root_path do
+    = link_to root_path do
       = render 'layouts/admin_logo'
     - if current_user
       .navbar.pull-right
@@ -17,5 +17,6 @@
               %li.divider
               %li= link_to 'Logout', logout_path
       %ul.adminMenu
+        %li= link_to 'Home', admin_root_path
         %li= link_to 'Blog', admin_blogs_path
         %li= link_to 'Images', admin_images_path

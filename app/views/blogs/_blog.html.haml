@@ -1,0 +1,5 @@
+.blogItem
+  .blogInner
+    = image_tag blog.cover_photo.url(:clipped), class: 'coverPhoto' unless blog.cover_photo.blank?
+    %h1.title= link_to blog.title, blog_path(blog), class: 'blackText'
+    .body= blog.body.html_safe

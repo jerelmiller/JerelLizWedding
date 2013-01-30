@@ -1,10 +1,4 @@
 .pageContainerHeader
   = link_to 'Write a new blog', new_admin_blog_path, class: 'button'
 
-%h1 Blogs
-- @blogs.each do |blog|
-  = image_tag blog.cover_photo.url(:original)
-  %h3= link_to blog.title, admin_blog_path(blog)
-  %p= blog.body.html_safe
-  %hr
-  
+= render @blogs

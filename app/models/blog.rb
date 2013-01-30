@@ -18,6 +18,7 @@ class Blog < ActiveRecord::Base
   before_post_process :image?
 
   validates :title, :body, presence: true
+  validates :title, uniqueness: true
 
   private
 

@@ -6,10 +6,8 @@
   .input
     %label Title
     = f.text_field :title
-  / %label Body
   .input
-    / .left Body
-    = f.cktext_area :body, class: 'left', ckeditor: {  }
-    / = f.text_area :body
+    = f.cktext_area :body, class: 'left'
   .submit
-    = f.submit 'Update blog', class: 'btn btn-primary btn-large'
+    = f.submit blog_button_text, class: 'button'
+    = link_to 'Cancel', previous_path, class: 'button'

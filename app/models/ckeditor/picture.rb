@@ -1,8 +1,11 @@
 class Ckeditor::Picture < Ckeditor::Asset
   has_attached_file :data,
-                    :url  => "/ckeditor_assets/pictures/:id/:style_:basename.:extension",
-                    :path => ":rails_root/public/ckeditor_assets/pictures/:id/:style_:basename.:extension",
-                    :styles => { :content => '800>', :thumb => '118x100#' }
+                    storage: :dropbox,
+                    dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
+                    styles: { :content => '800>', :thumb => '118x100#' },
+                    dropbox_options: {
+                      path: proc { |style| "#{Rails.env}/ckeditor/pictures/#{style}/#{id}/#{data.original_filename}"}
+                    }
 
   validates_attachment_size :data, :less_than => 2.megabytes
   validates_attachment_presence :data

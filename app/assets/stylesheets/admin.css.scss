@@ -301,3 +301,54 @@ ul.adminMenu {
     }
   }
 }
+
+.blog {
+  background: white;
+  padding: 30px;
+  margin-top: 20px;
+  border: 1px solid #ABABAB;
+  @include border_radius(2px);
+
+  .title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  img.cover_photo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &.item {
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .created {
+      margin-left: 20px;
+    }
+
+    .editLink {
+      top: 5px;
+      position: relative;
+      padding: 12px 15px 8px;
+      background: $purple;
+      @include border-radius(2px);
+      i {
+        top: -1px;
+      }
+      &:hover {
+        background: lighten($purple, 15%);
+      }
+    }
+  }
+}
+
+
+.blackText {
+  color: black;
+}
+
+a.blackText:hover {
+  color: #888;
+}

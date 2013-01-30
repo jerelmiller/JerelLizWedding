@@ -1,7 +1,8 @@
 .sidebar
+  = link_to 'Back to Admin', admin_root_path, class: 'adminLink' if current_user
   = link_to root_path do
     .logo= image_tag 'logo.png'
 
   %ul.menu
     %li= link_to 'Our Story', our_story_path
-    %li= link_to 'Blog', blog_path
+    %li= link_to 'Blog', blogs_path

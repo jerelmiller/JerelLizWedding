@@ -1,0 +1,7 @@
+.blog.item
+  %span.title= link_to blog.title, admin_blog_path(blog), class: 'blackText'
+  %span.created= blog.created_at.strftime('%b %-d %Y')
+  .right
+    = link_to edit_admin_blog_path(blog), class: 'editLink' do
+      %i.icon-pencil.icon-white
+      Edit
