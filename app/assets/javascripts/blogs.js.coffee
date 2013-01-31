@@ -1,4 +1,8 @@
 $ ->
+  $('.blogItem .body').each ->
+    $(@).truncate
+      max_length: 350
+
   $container = $('#blogsContainer')
   $container.imagesLoaded ->
     $container.isotope

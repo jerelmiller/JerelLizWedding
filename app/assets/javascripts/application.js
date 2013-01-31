@@ -16,4 +16,5 @@
 //= require ckeditor/init
 //= require bootstrap
 //= require jquery.isotope.min
+//= require jquery.truncator
 //= require_tree .

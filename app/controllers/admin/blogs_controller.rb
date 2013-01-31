@@ -19,7 +19,7 @@ class Admin::BlogsController < Admin::AdminController
   end
 
   def create
-    @blog = Blog.new(params[:blog])
+    @blog = Blog.new(params[:blog].merge(user_id: current_user.id))
 
     if @blog.save
       flash[:success] = "Successfully created blog"

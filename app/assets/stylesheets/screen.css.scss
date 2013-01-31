@@ -12,6 +12,7 @@ $offWhite: #EFEFEF;
 @mixin transition($property, $duration: 0.5s, $easing: linear) {
   -webkit-transition: $property $duration $easing;
   -moz-transition: $property $duration $easing;
+  -ms-transition: $property $duration $easing;
   -o-transition: $property $duration $easing;
   transition: $property $duration $easing;
 }
@@ -70,6 +71,10 @@ body {
 i {
   position: relative;
   top: 2px;
+}
+
+.clear {
+  clear: both;
 }
 
 .imageContainer {
@@ -165,19 +170,64 @@ i {
 
 .blogItem {
   float: left;
-  border: 1px solid #CCC;
+  border: 1px solid #BBB;
   width: 377px;
+  min-width: 377px;
   background: #FFF;
+  margin: -1px 0 0 -1px;
   .blogInner {
     padding: 20px;
+    @include transition(background, 0.2s);
+    &:hover {
+      background: lighten($purple, 63%);
+    }
   }
   img {
     max-width: 337px;
     height: auto;
   }
   .body {
+    font-size: 22px;
+    font-family: Walkway, Helvetica, sans-serif;
+  }
+}
+
+.blogPage {
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .title {
+    font-size: 50px;
+  }
+  .body {
+    font-size: 22px;
+    font-family: Walkway, Helvetica, sans-serif;
+  }
+  .textContainer {
+    width: 70%;
+    max-width: 70%;
+    border-right: 1px solid #BBB;
+  }
+  .textInner {
+    padding: 30px;
+  }
+  .blogDetails {
+    width: 29%;
+    max-width: 29%;
+  }
+  .detailsInner {
+    padding: 30px;
+  }
+  .detail {
+    margin-bottom: 10px;
     font-size: 20px;
-    font-family: Crew;
+    font-family: Walkway, Helvetica, sans-serif;
+  }
+  .blogSeparator {
+    width: 30%;
+    border-bottom: 1px solid #BBB;
+    border-top: 0;
   }
 }
 

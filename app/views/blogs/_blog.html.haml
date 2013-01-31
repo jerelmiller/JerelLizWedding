@@ -1,5 +1,7 @@
 .blogItem
   .blogInner
-    = image_tag blog.cover_photo.url(:clipped), class: 'coverPhoto' unless blog.cover_photo.blank?
+    = link_to image_tag(blog.cover_photo.url(:clipped)), blog_path(blog), class: 'coverPhoto' unless blog.cover_photo.blank?
     %h1.title= link_to blog.title, blog_path(blog), class: 'blackText'
+    %h3= blog.created_at.strftime('%B %-d %Y')
+    %hr
     .body= blog.body.html_safe

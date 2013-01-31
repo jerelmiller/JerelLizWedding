@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
 
   has_many :images
+  has_many :blogs
 
   validates :email, :presence => true, :uniqueness => true
   validates :password, :presence => true, :confirmation => true, :on => :create

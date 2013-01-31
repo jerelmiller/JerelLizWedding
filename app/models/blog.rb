@@ -1,5 +1,7 @@
 class Blog < ActiveRecord::Base
-  attr_accessible :title, :body, :cover_photo
+  belongs_to :user
+
+  attr_accessible :title, :body, :cover_photo, :user_id
 
   has_attached_file :cover_photo,
     storage: :dropbox,

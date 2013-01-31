@@ -11,17 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130128000628) do
+ActiveRecord::Schema.define(:version => 20130131024115) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
     t.string   "cover_photo_file_name"
     t.string   "cover_photo_content_type"
     t.integer  "cover_photo_file_size"
     t.datetime "cover_photo_updated_at"
+    t.integer  "user_id",                  :default => 0, :null => false
   end
 
   create_table "ckeditor_assets", :force => true do |t|
