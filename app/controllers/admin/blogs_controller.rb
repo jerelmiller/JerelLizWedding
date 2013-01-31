@@ -43,6 +43,17 @@ class Admin::BlogsController < Admin::AdminController
     end
   end
 
+  def destroy
+    @blog = Blog.find(params[:id])
+    if @blog.destroy
+      flash[:success] = 'Blog has been successfully deleted'
+    else
+      flash[:error] = 'There were errors deleting your blog. Please try again'
+    end
+
+    redirect_to admin_blogs_path
+  end
+
   def previous_path
     session[:return_to]
   end
