@@ -77,12 +77,10 @@ i {
   clear: both;
 }
 
-.imageContainer {
-  h1 {
-    width: 90%;
-    margin: 100px auto;
-    text-align: center;
-  }
+.imageContainer > h1, #blogsContainer > h1 {
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
 }
 
 .disabled {
