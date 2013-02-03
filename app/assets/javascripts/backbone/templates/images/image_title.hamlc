@@ -1,0 +1,2 @@
+.imageTitle.hide
+  %a{ href: @image_urls.large, rel: 'lightbox[images]', title: @title, 'data-ignore-lightbox' => 'true' }= @title.toUpperCase()

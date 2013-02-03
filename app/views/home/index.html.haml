@@ -1,7 +1,18 @@
-.imageContainer
+.imageContainer.clearfix
   - if @images.length.eql? 0
     %h1 We currently have no images to display. Don't sweat! We will be uploading some shortly.
 
+:javascript
 
-  - @images.each do |image|
-    .crop= link_to image_tag('purple.png', alt: image.title, class: 'lazy', 'data-id' => image.id), '#', 'data-title' => image.title.upcase, rel: 'lightbox[images]'
+  $(window).load(function() {
+    var images = new Wedding.Collections.ImageCollection(
+      #{render partial: 'index', formats: [:json], locals: { images: @images } }
+    );
+
+    var imageListView = new Wedding.Views.ImageListView({
+      el: '.imageContainer',
+      collection: images
+    });
+
+    imageListView.render();
+  });

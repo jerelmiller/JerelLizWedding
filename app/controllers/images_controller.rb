@@ -1,6 +1,12 @@
 class ImagesController < ApplicationController
-  def url
+
+  def show
     image = Image.find(params[:id])
-    render json: { image_url: image.image.url(params[:size].try(:to_sym)) }
+    image_urls = {}
+    styles = params[:styles].try(:split, ';').presence || ['original']
+    styles.each do |style|
+      image_urls[style] = image.image.url(style.to_sym)
+    end
+    render json: { image_urls: image_urls }
   end
 end

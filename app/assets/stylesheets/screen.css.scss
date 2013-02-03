@@ -145,20 +145,20 @@ i {
     margin: 0;
     float: left;
     position: relative;
-    a {
+    a.main {
       background: $purple;
       display: inline-block;
-      &.imageTitle {
-        position: absolute;
-        z-index: 999;
-        color: white;
-        font-size: 24px;
-        padding: 0 10px;
-        left: 0;
-        font-family: Raleway;
-        display: inline;
-        background: transparent;
-      }
+    }
+    .imageTitle {
+      position: absolute;
+      z-index: 999;
+      color: white;
+      font-size: 24px;
+      padding: 0 10px;
+      left: 0;
+      font-family: Raleway;
+      display: inline;
+      background: transparent;
     }
     img {
       margin: 0;

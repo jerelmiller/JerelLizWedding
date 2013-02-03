@@ -1,0 +1,3 @@
+%a.main{ href: '#', 'data-title' => @title.toUpperCase(), rel: 'lightbox[images]', title: @title }
+  %img.placeholder{ src: 'assets/purple.png', alt: @title }
+  %img.real.hide{ src: 'assets/purple.png', alt: @title }

@@ -19,4 +19,8 @@
 //= require jquery.truncator
 //= require spin
 //= require jquery.spin
+//= require hamlcoffee
+//= require underscore
+//= require backbone
+//= require backbone/wedding
 //= require_tree .
