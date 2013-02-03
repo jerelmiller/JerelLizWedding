@@ -4,7 +4,6 @@ $ ->
 
   if width < 400
     width = 400
-
   if width < 470
     num_tiles = 1
   else if width < 870
@@ -19,6 +18,8 @@ $ ->
   $('.crop').height(newHeight)
   $('.crop img').width(newWidth)
   $('body:not(.admin) .imageContainer').width(width)
+
+  $('img.lazy').lazyload()
 
   $('.crop img').each ->
     $(@).load ->
