@@ -38,7 +38,7 @@ class Wedding.Views.ImageView extends Backbone.View
 
   onHoverOut: =>
     @$('img.real').fadeTo(150, 1)
-    @$('.imageTitle').hide(150)
+    @$('.imageTitle').fadeOut(150)
 
   setSizes: =>
     @$el.width @_imageWidth()
