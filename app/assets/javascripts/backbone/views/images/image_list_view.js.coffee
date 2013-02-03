@@ -14,6 +14,7 @@ class Wedding.Views.ImageListView extends Backbone.View
     $(view.el).spin
       color: '#FFF'
       width: 4
+      zIndex: 2000
 
   render: =>
     @addAll()
