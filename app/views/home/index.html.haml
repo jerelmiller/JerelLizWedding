@@ -4,4 +4,4 @@
 
 
   - @images.each do |image|
-    .crop= link_to image_tag('purple.png', 'data-original' => image.image.url(:regular), alt: image.title, class: 'lazy'), image.image.url(:large), 'data-title' => image.title.upcase, rel: 'lightbox[images]'
+    .crop= link_to image_tag('purple.png', alt: image.title, class: 'lazy', 'data-id' => image.id), '#', 'data-title' => image.title.upcase, rel: 'lightbox[images]'

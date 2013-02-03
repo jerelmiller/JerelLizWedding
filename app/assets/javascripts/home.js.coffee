@@ -19,8 +19,6 @@ $ ->
   $('.crop img').width(newWidth)
   $('body:not(.admin) .imageContainer').width(width)
 
-  $('img.lazy').lazyload()
-
   $('.crop img').each ->
     $(@).load ->
       if @.height < newHeight
@@ -81,3 +79,27 @@ $ ->
         width: width
       , 100
     , 400
+
+  $(window).load ->
+    $('.crop').spin
+      color: '#CCC'
+      width: 4
+    $('.crop').each ->
+      $this = $(this)
+      $image = $(this).find('img')
+      $link = $(this).find('a')
+
+      $.ajax
+        url: "/images/#{$image.data('id')}/url"
+        data: { size: 'regular' }
+        success: (data) =>
+          $image.attr('src', data.image_url)
+          $image.load ->
+            $this.spin(false)
+            $image.hide().fadeIn()
+
+      $.ajax
+        url: "/images/#{$image.data('id')}/url"
+        data: { size: 'large' }
+        success: (data) =>
+          $link.attr('href', data.image_url)

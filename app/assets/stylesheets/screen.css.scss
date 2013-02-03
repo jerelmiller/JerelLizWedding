@@ -146,7 +146,7 @@ i {
     float: left;
     position: relative;
     a {
-      background: darken($purple, 10%);
+      background: $purple;
       display: inline-block;
       &.imageTitle {
         position: absolute;

@@ -17,5 +17,6 @@
 //= require bootstrap
 //= require jquery.isotope.min
 //= require jquery.truncator
-//= require jquery.lazyload
+//= require spin
+//= require jquery.spin
 //= require_tree .

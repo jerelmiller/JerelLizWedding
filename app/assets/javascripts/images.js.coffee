@@ -116,7 +116,6 @@ $ ->
       $this.css('height', 'auto')
 
   , ->
-    console.log 'hover out'
     $(@).animate
       height: originalHeight
     , 0
