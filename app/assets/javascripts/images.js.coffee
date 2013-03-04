@@ -28,7 +28,7 @@ $ ->
     authenticity_token = $('meta[name=csrf-token]').attr('content')
 
     $this.append(
-      "<form action='/admin/images/#{$this.data('image-id')}' method='post'>" +
+      "<form action='/admin/images/#{$this.data('image-id')}' class='noExtraSpace' method='post'>" +
         '<input name="_method" type="hidden" value="put">' +
         '<input name="authenticity_token" type="hidden" value="' + authenticity_token + '">' +
         '<div class="caption">' + $this.data('caption') + '</div>' +

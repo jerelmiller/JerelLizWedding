@@ -1,0 +1,34 @@
+@import 'colors';
+@import 'mixins';
+
+// Link styles
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a.main {
+  background: $purple;
+  display: inline-block;
+}
+
+a.blackText:hover {
+  color: #888;
+}
+
+ul.adminMenu {
+  li {
+    a {
+      display: block;
+      width: 160px;
+      text-align: center;
+      padding: 8px 5px;
+      @include transition(all, .1s);
+      &:hover {
+        background: $lightGrey;
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import 'mixins';
+@import 'colors';
+@import 'fonts';
+
+// General admin styles
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.admin.content {
+  font-size: 20px;
+  padding: 20px 0;
+  margin-left: 0;
+  color: #000;
+  font-family: Raleway, Helvetica, sans-serif;
+  margin-top: 30px;
+}
+
+.pageContainerHeader {
+  margin: 20px 0;
+}
+
+.recentImagesHeader {
+  margin-bottom: 20px;
+  h2 {
+    float: left;
+    margin: 0;
+  }
+}
+
+
+.blackText {
+  color: black;
+}

@@ -1,0 +1,43 @@
+@import 'placeholders';
+
+.clear {
+  clear: both;
+}
+
+.disabled {
+  opacity: 0.7;
+}
+
+.marginLeft10 {
+  margin-left: 10px;
+}
+
+.noExtraSpace {
+  @extend %marginPadding0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.content {
+  position: relative;
+  margin: 0 0 0 280px;
+}
+
+.imageContainer > h1, #blogsContainer > h1 {
+  width: 90%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.ourStory {
+  .body {
+    padding: 20px;
+    font-size: 40px;
+  }
+}

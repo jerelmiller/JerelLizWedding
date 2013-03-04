@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'mixins';
+
+// Button Styles
+
+.button {
+  padding: 15px 10px 10px;
+  @include border-radius(2px);
+  background: lighten($purple, 10%);
+  font-family: Raleway, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 0;
+  color: white;
+  line-height: 25px;
+  &:hover {
+    background: lighten($purple, 15%);
+  }
+  &.small {
+    font-size: 14px;
+  }
+}
+
+.pageContainerHeader {
+  .button {
+    font-size: 14px;
+  }
+}
+
+.recentImagesHeader {
+  .button {
+    position: relative;
+    top: 8px;
+    margin-left: 20px;
+    font-size: 14px;
+  }
+}
+
+.recentImages {
+  .button {
+    font-size: 14px;
+    margin-left: 20px;
+    clear: right;
+  }
+}

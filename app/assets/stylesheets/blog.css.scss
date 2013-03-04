@@ -1,0 +1,109 @@
+@import 'colors';
+@import 'mixins';
+
+#blogsContainer {
+  height: 100%;
+}
+
+.blogItem {
+  float: left;
+  border: 1px solid #BBB;
+  width: 377px;
+  min-width: 377px;
+  background: #FFF;
+  margin: -1px 0 0 -1px;
+  img {
+    max-width: 337px;
+    height: auto;
+  }  
+}
+
+.blogInner {
+  padding: 20px;
+  @include transition(background, 0.2s);
+  &:hover {
+    background: lighten($purple, 63%);
+  }
+}
+
+.blogPage {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.blogSeparator {
+  width: 30%;
+  border-bottom: 1px solid #BBB;
+  border-top: 0;
+}
+
+.blogDetails {
+  width: 29%;
+  max-width: 29%;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.textContainer {
+  width: 70%;
+  max-width: 70%;
+  border-right: 1px solid #BBB;
+}
+.textInner {
+  padding: 30px;
+}
+
+.detailsInner {
+  padding: 30px;
+}
+.detail {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-family: Walkway, Helvetica, sans-serif;
+}
+
+.blog {
+  background: white;
+  padding: 30px;
+  margin-top: 20px;
+  border: 1px solid #ABABAB;
+  @include border_radius(2px);
+
+  .title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  img.cover_photo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &.item {
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .created {
+      margin-left: 20px;
+    }
+
+    .editLink {
+      top: 5px;
+      position: relative;
+      padding: 12px 15px 8px;
+      background: $purple;
+      @include border-radius(2px);
+      i {
+        top: -1px;
+      }
+      &:hover {
+        background: lighten($purple, 15%);
+      }
+    }
+  }
+}
