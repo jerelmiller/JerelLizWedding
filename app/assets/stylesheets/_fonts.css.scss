@@ -1,30 +1,73 @@
-$crew_path: url(CREW36.eot), url(CREW36.svg), url(CREW36.ttf), url(CREW36.woff);
-$raleway_path: url(raleway_thin-webfont.eot), url(raleway_thin-webfont.svg), url(raleway_thin-webfont.ttf), url(raleway_thin-webfont.woff);
-$walkway_path: url(Walkway_SemiBold-webfont.eot), url(Walkway_SemiBold-webfont.svg), url(Walkway_SemiBold-webfont.ttf), url(Walkway_SemiBold-webfont.woff);
-$existence_path: url(Existence-UnicaseLight-webfont.eot), url(Existence-UnicaseLight-webfont.svg), url(Existence-UnicaseLight-webfont.ttf), url(Existence-UnicaseLight-webfont.woff);
-$call_me_maybe_path: url(KGCallMeMaybe.ttf);
+// $crew_path: url(CREW36.eot), url(CREW36.svg), url(CREW36.ttf), url(CREW36.woff);
+// $raleway_path: url(raleway_thin-webfont.eot), url(raleway_thin-webfont.svg), url(raleway_thin-webfont.ttf), url(raleway_thin-webfont.woff);
+// $walkway_path: url(Walkway_SemiBold-webfont.eot), url(Walkway_SemiBold-webfont.svg), url(Walkway_SemiBold-webfont.ttf), url(Walkway_SemiBold-webfont.woff);
+// $existence_path: url(Existence-UnicaseLight-webfont.eot), url(Existence-UnicaseLight-webfont.svg), url(Existence-UnicaseLight-webfont.ttf), url(Existence-UnicaseLight-webfont.woff);
+// $call_me_maybe_path: url(KGCallMeMaybe.ttf);
+
+$cicle_path: url(Cicle.ttf);
+$comfortaa_light_path: url(Comfortaa-Light.ttf);
+$comfortaa_path: url(Comfortaa-Regular.ttf);
+$eurofurence_light_path: url(eurofurence-light.ttf);
+$eurofurence_path: url(eurofurence.ttf);
+$print_clearly_path: url(PrintClearly.ttf);
+$nexa_path: url(Nexa_Light.otf);
 
 @font-face {
-  font-family: Crew;
-  src: $crew_path;
+  font-family: Cicle;
+  src: $cicle_path;
 }
 
 @font-face {
-  font-family: Walkway;
-  src: $walkway_path;
+  font-family: Nexa;
+  src: $nexa_path;
 }
 
 @font-face {
-  font-family: Raleway;
-  src: $raleway_path;
+  font-family: 'Comfortaa Light';
+  src: $comfortaa_light_path;
 }
 
 @font-face {
-  font-family: Existence;
-  src: $existence_path;
+  font-family: Comfortaa;
+  src: $comfortaa_path;
 }
 
 @font-face {
-  font-family: CallMeMaybe;
-  src: $call_me_maybe_path;
+  font-family: 'Eurofurence Light';
+  src: $eurofurence_light_path;
 }
+
+@font-face {
+  font-family: Eurofurence;
+  src: $eurofurence_path;
+}
+
+@font-face {
+  font-family: 'Print Clearly';
+  src: $print_clearly_path;
+}
+
+// @font-face {
+//   font-family: Crew;
+//   src: $crew_path;
+// }
+
+// @font-face {
+//   font-family: Walkway;
+//   src: $walkway_path;
+// }
+
+// @font-face {
+//   font-family: Raleway;
+//   src: $raleway_path;
+// }
+
+// @font-face {
+//   font-family: Existence;
+//   src: $existence_path;
+// }
+
+// @font-face {
+//   font-family: CallMeMaybe;
+//   src: $call_me_maybe_path;
+// }

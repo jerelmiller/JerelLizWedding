@@ -1,4 +1,23 @@
-# $ ->
+$ ->
+  $('.menu a').click (e) ->
+    e.preventDefault()
+    href = $(@).attr('href')
+    $('html,body').stop().animate({
+      scrollTop: $(href).offset().top
+    }, 1000, 'easeInOutExpo')
+
+
+    # $('ul.nav a').bind('click',function(event){
+    #           var $anchor = $(this);
+
+    #           $('html, body').stop().animate({
+    #               scrollTop: $($anchor.attr('href')).offset().top
+    #           }, 1500,'easeInOutExpo');
+    #           $('html, body').stop().animate({
+    #               scrollTop: $($anchor.attr('href')).offset().top
+    #           }, 1000);
+    #           event.preventDefault();
+    #       });
 
 #   # $(window).resize ->
 

@@ -1,18 +1,56 @@
-.imageContainer.clearfix
-  - if @images.length.eql? 0
-    %h1 We currently have no images to display. Don't sweat! We will be uploading some shortly.
+/ .imageContainer.clearfix
+/   - if @images.length.eql? 0
+/     %h1 We currently have no images to display. Don't sweat! We will be uploading some shortly.
 
-:javascript
+/ :javascript
 
-  $(window).load(function() {
-    var images = new Wedding.Collections.ImageCollection(
-      #{render partial: 'index', formats: [:json], locals: { images: @images } }
-    );
+/   $(window).load(function() {
+/     var images = new Wedding.Collections.ImageCollection(
+/       #{render partial: 'index', formats: [:json], locals: { images: @images } }
+/     );
 
-    var imageListView = new Wedding.Views.ImageListView({
-      el: '.imageContainer',
-      collection: images
-    });
+/     var imageListView = new Wedding.Views.ImageListView({
+/       el: '.imageContainer',
+/       collection: images
+/     });
 
-    imageListView.render();
-  });
+/     imageListView.render();
+/   });
+
+= image_tag 'feet.jpg', id: 'home'
+
+.section#ourStory
+  .column.groom
+    .gray.small.title Groom
+    .title Jerel Miller
+    %hr
+    .clear
+    %p
+      I still remember the moment before I met Liz. I was in her apartment hanging out with one of my friends and his girlfriend. I remember looking
+      at their whiteboard hung on the wall with the name "Liz" written on it and wondering who she was and if I would be interested
+      in getting to know her more. Little did I know that I would be standing here today preparing to marry her.
+
+    %p
+      Liz is the definition of radiance and brilliance. Her smile has the ability to turn a cloudy day into a beautiful display of amazing. Much like
+      her smile, she has been such a radiance and brilliance in my life. Her love for God and glowing personality continues to amaze me. I have
+      been blessed to the fullest and I cannot wait to share my life with her.
+
+  .column.bride
+    .gray.small.title Bride
+    .title Liz Kingham
+    %hr
+    .clear
+    %p
+      I first met Jerel when I came home to my apartment one night. My roommate was dating his friend, and they were all hanging out.
+      I instantly felt connected to him; he had the ability to make me laugh at anything. I knew from the moment I met him that I wanted to get to know him better.
+      It took an agonizingly long month for him to realize that he wanted the same thing.
+
+    %p
+      Ever since then, he has been one of my closest friends, and I really can’t imagine the last few years of college without him.
+      The seventy-mile distance made it difficult to see each other, but we managed to get together a few times a month.
+      We have shared a lot of joy over the years and I am so excited to be getting married to Jerel.
+      I can’t wait to see where life takes us!
+
+
+.section#photos
+  .title.center Photos

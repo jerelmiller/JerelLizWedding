@@ -23,4 +23,5 @@
 //= require underscore
 //= require backbone
 //= require backbone/wedding
+//= require jquery.easing.1.3
 //= require_tree .
