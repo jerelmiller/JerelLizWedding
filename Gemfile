@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'haml'
 gem 'sorcery'
 gem 'paperclip'
@@ -9,6 +9,7 @@ gem 'paperclip-dropbox'
 gem 'ckeditor'
 gem 'jbuilder'
 gem 'rails-backbone'
+gem 'thin'
 
 
 # Gems used only for assets and not required
