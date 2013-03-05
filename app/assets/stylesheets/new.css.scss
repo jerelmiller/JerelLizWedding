@@ -9,6 +9,7 @@ $gray: #3D3D3D;
 html, body {
   margin: 0;
   padding: 0;
+  padding-bottom: 30px;
   // font-family: Cicle, Helvetica, Arial, sans-serif;
   // font-family: 'Comfortaa Light', Helvetica, Arial, sans-serif;
   // font-family: Comfortaa, Helvetica, Arial, sans-serif;
@@ -18,7 +19,7 @@ html, body {
   color: $gray;
 }
 
-ul {
+ul, ol {
   margin: 0;
   padding: 0;
 }

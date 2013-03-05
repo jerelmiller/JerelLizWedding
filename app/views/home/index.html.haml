@@ -51,5 +51,27 @@
       her smile, she has been such a radiance and brilliance in my life. Her love for God and glowing personality continues to amaze me. I have
       been blessed to the fullest and I cannot wait to share my life with her.
 
+  = image_tag 'timeline.jpg'
+
+
 .section#photos
   .title.center Photos
+
+  - if @images.length > 0
+
+    #photoCarousel.carousel.slide
+
+      .carousel-inner
+        - @images.each_with_index do |image, index|
+          .item{ class: index.eql?(0) ? 'active' : '' }
+            = image_tag image.image.url(:large)
+          / .item= image_tag 'header.jpg'
+          / .item= image_tag 'feet.jpg'
+      = link_to '&lsaquo;'.html_safe, '#photoCarousel', class: 'carousel-control left', 'data-slide' => 'prev'
+      = link_to '&rsaquo;'.html_safe, '#photoCarousel', class: 'carousel-control right', 'data-slide' => 'next'
+
+      %ol.carousel-indicators
+        - @images.each_with_index do |image, index|
+          %li{ 'data-target' => '#photoCarousel', 'data-slide-to' => index, class: index.eql?(0) ? 'active' : '' }
+  - else
+    No images to display
