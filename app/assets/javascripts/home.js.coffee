@@ -8,7 +8,7 @@ setMenuLinks = =>
     e.preventDefault()
     href = $(@).attr('href')
     $('html,body').stop().animate({
-      scrollTop: $(href).offset().top - 65
+      scrollTop: $(href).offset().top - 70
     }, 1000, 'easeInOutExpo')
 
 setIndicatorWidth = =>

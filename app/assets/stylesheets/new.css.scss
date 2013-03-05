@@ -109,15 +109,19 @@ html .clearfix {
   font-family: 'Eurofurence Light', Helvetica, Arial, sans-serif;
   // color: $purple;
   .groom & {
-    margin-left: 80px;
+    margin-left: 26px;
   }
   .bride & {
-    margin-left: 75px;
+    margin-left: 70px;
   }
   &.small {
     font-size: 33px;
     font-style: italic;
     margin-bottom: -12px;
+
+    .groom & {
+      margin-left: 83px;
+    }
   }
   &.center {
     text-align: center;
@@ -146,4 +150,26 @@ p {
   font-size: 16px;
   line-height: 24px;
   text-align: justify;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  &.jerel {
+    background: url(Jdot.jpg);
+    background-position: -12px -12px;
+    margin: 34px 0 0 35px;
+  }
+  &.liz {
+    background: url(Ldot.jpg);
+    background-position: -11px -7px;
+    &.inTitle {
+      margin: 34px 35px 0 0;
+    }
+  }
+
+}
+
+.timeline {
+  margin-top: 20px;
 }

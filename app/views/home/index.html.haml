@@ -22,7 +22,8 @@
 .section#ourStory
   .column.bride
     .gray.small.title Bride
-    .title Liz Kingham
+    .title.pull-left Liz Kingham
+    .icon.liz.pull-right.inTitle
     %hr
     .clear
     %p
@@ -38,7 +39,8 @@
 
   .column.groom
     .gray.small.title Groom
-    .title Jerel Miller
+    .icon.jerel.pull-left.inTitle
+    .title.pull-left Jerel Miller
     %hr
     .clear
     %p
@@ -51,27 +53,27 @@
       her smile, she has been such a radiance and brilliance in my life. Her love for God and glowing personality continues to amaze me. I have
       been blessed to the fullest and I cannot wait to share my life with her.
 
-  = image_tag 'timeline.jpg'
+  = image_tag 'timeline.jpg', class: 'timeline'
 
 
 .section#photos
   .title.center Photos
 
-  - if @images.length > 0
+  / - if @images.length > 0
 
-    #photoCarousel.carousel.slide
+  /   #photoCarousel.carousel.slide
 
-      .carousel-inner
-        - @images.each_with_index do |image, index|
-          .item{ class: index.eql?(0) ? 'active' : '' }
-            = image_tag image.image.url(:large)
-          / .item= image_tag 'header.jpg'
-          / .item= image_tag 'feet.jpg'
-      = link_to '&lsaquo;'.html_safe, '#photoCarousel', class: 'carousel-control left', 'data-slide' => 'prev'
-      = link_to '&rsaquo;'.html_safe, '#photoCarousel', class: 'carousel-control right', 'data-slide' => 'next'
+  /     .carousel-inner
+  /       - @images.each_with_index do |image, index|
+  /         .item{ class: index.eql?(0) ? 'active' : '' }
+  /           = image_tag image.image.url(:large)
+  /         / .item= image_tag 'header.jpg'
+  /         / .item= image_tag 'feet.jpg'
+  /     = link_to '&lsaquo;'.html_safe, '#photoCarousel', class: 'carousel-control left', 'data-slide' => 'prev'
+  /     = link_to '&rsaquo;'.html_safe, '#photoCarousel', class: 'carousel-control right', 'data-slide' => 'next'
 
-      %ol.carousel-indicators
-        - @images.each_with_index do |image, index|
-          %li{ 'data-target' => '#photoCarousel', 'data-slide-to' => index, class: index.eql?(0) ? 'active' : '' }
-  - else
-    No images to display
+  /     %ol.carousel-indicators
+  /       - @images.each_with_index do |image, index|
+  /         %li{ 'data-target' => '#photoCarousel', 'data-slide-to' => index, class: index.eql?(0) ? 'active' : '' }
+  / - else
+  /   No images to display
