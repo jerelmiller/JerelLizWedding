@@ -82,6 +82,10 @@ html .clearfix {
   color: $grayColor !important;
 }
 
+#home {
+  margin-top: 65px;
+}
+
 .section {
   @extend .clearfix;
   width: 900px;
