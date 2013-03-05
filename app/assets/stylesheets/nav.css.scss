@@ -17,7 +17,7 @@ ul.adminMenu {
   float: right;
   list-style-type: none;
   position: absolute;
-  bottom: 33px;
+  bottom: -60px;
   right: 0px;
   margin: 0;
   font-size: 30px;
@@ -26,27 +26,27 @@ ul.adminMenu {
   }
 }
 
-.menu {
-  margin-top: 50px;
-  list-style-type: none;
-  padding: 0;
-  font-size: 30px;
-  font-family: Existence;
-  li {
-    a {
-      width: 240px;
-      margin-left: 0;
-      position: relative;
-      right: 40px;
-      padding-left: 40px;
-      display: block;
-      @include transition(background, 0.1s);
-      &:hover {
-        background: rgba($lightGrey, 0.6);
-      }
-    }
-  }
-}
+// .menu {
+//   margin-top: 50px;
+//   list-style-type: none;
+//   padding: 0;
+//   font-size: 30px;
+//   font-family: Existence;
+//   li {
+//     a {
+//       width: 240px;
+//       margin-left: 0;
+//       position: relative;
+//       right: 40px;
+//       padding-left: 40px;
+//       display: block;
+//       @include transition(background, 0.1s);
+//       &:hover {
+//         background: rgba($lightGrey, 0.6);
+//       }
+//     }
+//   }
+// }
 
 body.admin {
   .header {
@@ -54,6 +54,7 @@ body.admin {
     background: $grey;
     padding: 20px 0;
     height: 70px;
+    position: relative;
     .logo {
       font-size: 50px;
       margin: 0;

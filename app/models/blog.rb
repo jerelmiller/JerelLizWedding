@@ -12,7 +12,7 @@ class Blog < ActiveRecord::Base
       large: "800x800>", 
     },
     dropbox_options: {
-      path: proc { |style| "#{Rails.env}/cover_photos/#{style}/#{id}/#{cover_photo.original_filename}"}
+      path: proc { |style| "jerelandliz/#{Rails.env}/cover_photos/#{style}/#{id}/#{cover_photo.original_filename}"}
     }
 
   validates_attachment :cover_photo, content_type: { content_type: ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'] }

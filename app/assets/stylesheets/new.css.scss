@@ -32,12 +32,6 @@ a {
   }
 }
 
-img {
-  height: auto;
-  width: 100%;
-  border: 0;
-}
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -126,6 +120,10 @@ html .clearfix {
   &.center {
     text-align: center;
   }
+
+  #photos & {
+    margin-bottom: 30px;
+  }
 }
 
 hr {
@@ -172,4 +170,9 @@ p {
 
 .timeline {
   margin-top: 20px;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
 }

@@ -4,7 +4,7 @@ class Ckeditor::AttachmentFile < Ckeditor::Asset
                     dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
                     styles: { :content => '800>', :thumb => '118x100#' },
                     dropbox_options: {
-                      path: proc { |style| "#{Rails.env}/ckeditor_assets/attachments/#{style}/#{id}/#{data.original_filename}"}
+                      path: proc { |style| "jerelandliz/#{Rails.env}/ckeditor_assets/attachments/#{style}/#{id}/#{data.original_filename}"}
                     }
 
   validates_attachment_size :data, :less_than => 100.megabytes
