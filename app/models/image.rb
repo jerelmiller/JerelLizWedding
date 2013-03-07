@@ -5,7 +5,7 @@ class Image < ActiveRecord::Base
   has_attached_file :image,
     storage: :dropbox,
     dropbox_credentials: "#{Rails.root}/config/dropbox.yml",
-    styles: { regular: "500x500>", thumb: "200x200>", large: "900x900>" },
+    styles: { regular: "500x500>", thumb: "200x200>", large: "850x500#" },
     dropbox_options: {
       path: proc { |style| "jerelandliz/#{Rails.env}/images/#{style}/#{id}/#{image.original_filename}"}
     }

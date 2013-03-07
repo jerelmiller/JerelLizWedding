@@ -180,3 +180,27 @@ p {
   margin: 0 auto;
   text-align: center;
 }
+
+.box {
+  margin-top: 50px;
+
+  &:first-child {
+    margin-top: 30px;
+  }
+
+  .boxTop {
+    @include box-shadow(0, 0, 20px, 0px, #CCC);
+    margin: 0 auto;
+    width: 652px;
+    height: 35px;
+  }
+
+  .boxBottom {
+    @extend .center;
+    @include box-shadow(0, 0, 20px, 0px, #CCC);
+    line-height: 24px;
+    width: 632px;
+    font-size: 20px;
+    padding: 20px 10px 45px;
+  }
+}
