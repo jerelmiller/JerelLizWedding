@@ -103,6 +103,20 @@
       .center= image_tag 'where.jpg'
       .boxBottom
         Reception: Crossroads Church, Northglenn Campus
-        %iframe{ width: "425", height: "350", frameborder: "0", scrolling: "no", marginheight: "0", marginwidth: "0", src: "https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Crossroads+Church+%E2%80%94+Northglenn,+Huron+Street,+Northglenn,+CO&amp;aq=0&amp;oq=Crossroads+chur&amp;sll=38.997934,-105.550567&amp;sspn=5.795914,11.634521&amp;ie=UTF8&amp;hq=Crossroads+Church+%E2%80%94+Northglenn,+Huron+Street,+Northglenn,+CO&amp;t=m&amp;ll=39.886188,-104.997329&amp;spn=0.017123,0.032015&amp;output=embed".html_safe }
-        %br
-        %small= link_to 'View Larger Map', 'https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Crossroads+Church+%E2%80%94+Northglenn,+Huron+Street,+Northglenn,+CO&amp;aq=0&amp;oq=Crossroads+chur&amp;sll=38.997934,-105.550567&amp;sspn=5.795914,11.634521&amp;ie=UTF8&amp;hq=Crossroads+Church+%E2%80%94+Northglenn,+Huron+Street,+Northglenn,+CO&amp;t=m&amp;ll=39.886188,-104.997329&amp;spn=0.017123,0.032015" style="color:#0000FF;text-align:left'.html_safe, target: '_blank'
+
+        #receptionMap.map
+
+
+:javascript
+  var map = new Wedding.Models.Map({
+    latitude: -34.397,
+    longitude: 150.644,
+    address: 'Crossroads Church — Northglenn, Huron Street, Northglenn, CO'
+  });
+
+  var mapsView = new Wedding.Views.MapsView({
+    model: map,
+    el: '#receptionMap'
+  });
+
+  mapsView.render()
