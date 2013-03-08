@@ -13,5 +13,5 @@ class Wedding.Models.Map extends Backbone.Model
   mapOptions: =>
     _.extend {},
       center: new google.maps.LatLng @get('latitude'), @get('longitude')
-      zoom: 14
+      zoom: 15
       mapTypeId: google.maps.MapTypeId.ROADMAP

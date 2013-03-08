@@ -204,6 +204,11 @@ p {
     width: 632px;
     font-size: 20px;
     padding: 20px 10px 45px;
+
+    hr {
+      margin: 20px 30px;
+      width: 90%;
+    }
   }
 }
 
@@ -215,4 +220,11 @@ p {
   height: 300px;
   width: 480px;
   margin: 15px auto 0;
+}
+
+.mapTitle {
+  margin-top: 20px;
+  &:first-child {
+    margin-top: 0;
+  }
 }
