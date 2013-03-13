@@ -102,11 +102,25 @@
       .boxTop
       .center= image_tag 'where.jpg'
       .boxBottom
-        .mapTitle Ceremony: Crossroads Church, Northglenn Campus
-        #ceremonyMap.map
+        .mapTitle Ceremony:
+        Crossroads Church
+        %br
+        10451 Huron St
+        %br
+        Northglenn, CO 80234
+        #ceremonyMapContainer
+          #ceremonyMap.map
+          .mapControls
         %hr
-        .mapTitle Reception: Crossroads Church, Thornton Campus
-        #receptionMap.map
+        .mapTitle Reception:
+        Crossroads Church
+        %br
+        53 East 128th Ave
+        %br
+        Thornton, CO 80241
+        #receptionMapContainer
+          #receptionMap.map
+          .mapControls
 
 
 :javascript
@@ -124,12 +138,12 @@
 
   var ceremonyMapsView = new Wedding.Views.MapsView({
     model: ceremonyMap,
-    el: '#ceremonyMap'
+    el: '#ceremonyMapContainer'
   });
 
   var receptionMapsView = new Wedding.Views.MapsView({
     model: receptionMap,
-    el: '#receptionMap'
+    el: '#receptionMapContainer'
   });
 
   ceremonyMapsView.render()

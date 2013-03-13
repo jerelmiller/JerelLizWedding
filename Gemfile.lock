@@ -165,6 +165,7 @@ PLATFORMS
 DEPENDENCIES
   ckeditor
   coffee-rails (~> 3.2.1)
+  execjs
   haml
   haml_coffee_assets
   jbuilder

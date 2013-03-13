@@ -24,4 +24,6 @@
 //= require backbone
 //= require backbone/wedding
 //= require jquery.easing.1.3
+//= require hamlcoffee
+//= require_tree ./backbone/templates
 //= require_tree .

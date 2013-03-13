@@ -11,6 +11,7 @@ $eurofurence_light_path: url(eurofurence-light.ttf);
 $eurofurence_path: url(eurofurence.ttf);
 $print_clearly_path: url(PrintClearly.ttf);
 $nexa_path: url(Nexa_Light.otf);
+$nexa_bold_path: url(Nexa_Bold.otf);
 
 @font-face {
   font-family: Cicle;
@@ -20,6 +21,12 @@ $nexa_path: url(Nexa_Light.otf);
 @font-face {
   font-family: Nexa;
   src: $nexa_path;
+}
+
+@font-face {
+  font-family: Nexa;
+  src: $nexa_bold_path;
+  font-weight: bold;
 }
 
 @font-face {

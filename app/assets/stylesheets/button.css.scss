@@ -4,19 +4,22 @@
 // Button Styles
 
 .button {
-  padding: 15px 10px 10px;
+  padding: 10px 8px 8px;
   @include border-radius(2px);
-  background: lighten($purple, 10%);
-  font-family: Raleway, Helvetica, sans-serif;
-  font-weight: bold;
-  border: 0;
-  color: white;
-  line-height: 25px;
+  // background: lighten($purple, 10%);
+  background: $buttonRed;
+  font-size: 16px;
+  display: inline-block;
+  color: #EEE;
+  cursor: pointer;
   &:hover {
-    background: lighten($purple, 15%);
+    background: lighten($buttonRed, 5%);
   }
-  &.small {
-    font-size: 14px;
+  // &.small {
+  //   font-size: 14px;
+  // }
+  &.directions, &.getDirections {
+    margin-top: 15px;
   }
 }
 

@@ -10,6 +10,8 @@ gem 'ckeditor'
 gem 'jbuilder'
 gem 'rails-backbone'
 gem 'thin'
+gem 'haml_coffee_assets'
+gem 'execjs'
 
 
 # Gems used only for assets and not required

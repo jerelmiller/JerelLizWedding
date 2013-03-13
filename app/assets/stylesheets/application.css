@@ -10,10 +10,10 @@
  *
  *= require bootstrap
  *= require bootstrap_overrides
- *= require new
  *= require nav
  *= require form
  *= require button
  *= require admin_general
+ *= require new
  *= require_self
  */

@@ -1,0 +1,11 @@
+.directionsContainer.hide
+  %span Enter your address
+  %input{ type: 'text', placeholder: 'Enter Address' }
+  .close &times;
+  .button.submit.getDirections Get Directions
+.button.directions Get Directions
+.arrow.gray.hide
+.arrow.white.hide
+.directionsListContainer.hide
+  .title.small Directions
+  .directionsList
