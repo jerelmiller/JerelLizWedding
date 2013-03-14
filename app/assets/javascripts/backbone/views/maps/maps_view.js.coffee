@@ -9,7 +9,6 @@ class Wedding.Views.MapsView extends Backbone.View
 
   initialize: =>
     @_setupMap()
-    @searchByAddress @model.get('address')
 
   render: =>
     @$('.mapControls').html @template
@@ -17,6 +16,7 @@ class Wedding.Views.MapsView extends Backbone.View
 
   renderDirections: (directions) =>
     @directionsDisplay.setDirections directions
+    @renderDirectionsList directions
 
   renderDirectionsList: (directions) =>
     @$('.directionsList').empty()
@@ -30,71 +30,42 @@ class Wedding.Views.MapsView extends Backbone.View
 
   showDirectionsContainer: =>
     @model.set 'hasMoved', false
-    @$('.directionsContainer').slideDown
-      easing: 'swing'
-      always: =>
-        @$('.directions').fadeTo 400, 0
+    @$('.directionsContainer').slideDown @_slideContainerOptions(0)
+
+  hideDirectionsContainer: =>
+    @$('.directionsContainer').slideUp @_slideContainerOptions(1)
 
   close: =>
     @_toggleDirectionsList false
-    if @model.get('hasMoved')
-      @$('.map, .directionsContainer').css({ right: '180px' }).animate right: '0',
-        always: @hideDirectionsContainer
-    else
-      @hideDirectionsContainer()
-
-  hideDirectionsContainer: =>
-    @$('.directionsContainer').slideUp
-      always: =>
-        @$('.directions').fadeTo 400, 1
+    return @hideDirectionsContainer() unless @model.get('hasMoved')
+    @$('.map, .directionsContainer').css({ right: '180px' }).animate right: '0',
+      always: @hideDirectionsContainer
 
   getDirections: =>
-    @setOrigin()
-    @directionsService.route @model.directionsParams(), @handleDirections
-
-  searchByAddress: (address) =>
-    @geocoder.geocode
-      address: address
-    , @handleGeocode
+    @model.set 'origin', @$('input').val()
+    @model.getDirections @handleDirections
 
   addMarker: (position) =>
     new google.maps.Marker
       map: @map
       position: position
 
-  handleDirections: (result, status) =>
-    if status == google.maps.DirectionsStatus.OK
-      if @model.get 'hasMoved'
-        @renderDirections result
-        @renderDirectionsList result
-      else
-        @$('.map, .directionsContainer').animate right: '200px',
-          always: =>
-            @model.set 'hasMoved', true
-            @renderDirections result
-            @renderDirectionsList result
-    else
-      console.log 'Directions not successful'
+  handleDirections: (directions) =>
+    return @renderDirections directions if @model.get('hasMoved')
+    @$('.map, .directionsContainer').animate right: '200px',
+      always: =>
+        @model.set 'hasMoved', true
+        @renderDirections directions
 
-  handleGeocode: (results, status) =>
-    if status == google.maps.GeocoderStatus.OK
-      @map.setCenter results[0].geometry.location
-      @addMarker results[0].geometry.location
-    else
-      console.log 'Geocode not successful'
-
-  setOrigin: =>
-    @model.set 'origin', @$('input').val()
+  setCenter: (results) =>
+    @map.setCenter results[0].geometry.location
+    @addMarker results[0].geometry.location
 
   _setupMap: =>
     @map = new google.maps.Map document.getElementById(@$('.map').attr('id')), @model.mapOptions()
-    @_initializeServicesAndAddMap @map
-
-  _initializeServicesAndAddMap: (map) =>
-    @geocoder = new google.maps.Geocoder()
-    @directionsService = new google.maps.DirectionsService()
     @directionsDisplay = new google.maps.DirectionsRenderer()
-    @directionsDisplay.setMap map
+    @directionsDisplay.setMap @map
+    @model.initializeDestination @setCenter
 
   _toggleDirectionsList: (toggle) =>
     if toggle
@@ -104,3 +75,9 @@ class Wedding.Views.MapsView extends Backbone.View
     else
       @$('.arrow').fadeOut()
       @$('.arrows, .directionsListContainer').fadeOut()
+
+  _slideContainerOptions: (opacity) =>
+    _.extend {},
+      easing: 'swing'
+      always: =>
+        @$('.directions').fadeTo 400, opacity

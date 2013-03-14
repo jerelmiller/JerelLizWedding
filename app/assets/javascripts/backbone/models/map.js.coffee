@@ -1,27 +1,24 @@
 class Wedding.Models.Map extends Backbone.Model
 
-  # directionsBaseUrl: 'http://maps.googleapis.com/maps/api/directions/json?sensor=false'
-
   defaults:
     address: ''
     origin: ''
     latitude: 0
     longitude: 0
 
-  # urlRoot: 'http://maps.googleapis.com/maps/api/directions/json?sensor=false'
-
   initialize: (options = {}) =>
     @set 'address', options.address
     @set 'latitude', options.latitude
     @set 'longitude', options.longitude
+    @_setup()
 
-    # @_setupDirectionsService
+  initializeDestination: (callback) =>
+    @geocoder.geocode
+      address: @get('address')
+    , (results, status) =>
+      return callback(results) if status == google.maps.GeocoderStatus.OK
+      console.log 'Geocode not successful'
 
-  # fetchDirections: (from, to) =>
-  #   @fetch
-  #     data:
-  #       origin: from
-  #       destination: to
   directionsParams: =>
     _.extend {},
       origin: @get('origin')
@@ -35,5 +32,11 @@ class Wedding.Models.Map extends Backbone.Model
       mapTypeId: google.maps.MapTypeId.ROADMAP
       mapTypeControl: false
 
-  # _setupDirectionsService: =>
-  #   @directionsService = new google.maps.DirectionsService()
+  getDirections: (callback) =>
+    @directionsService.route @directionsParams(), (result, status) =>
+      return callback(result) if status == google.maps.DirectionsStatus.OK
+      console.log 'Directions not successful'
+
+  _setup: =>
+    @geocoder = new google.maps.Geocoder()
+    @directionsService = new google.maps.DirectionsService()
