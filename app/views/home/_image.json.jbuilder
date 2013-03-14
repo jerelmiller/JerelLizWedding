@@ -1,1 +1,0 @@
-json.(image, :id, :title)
