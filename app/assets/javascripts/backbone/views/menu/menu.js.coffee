@@ -1,6 +1,7 @@
 class Wedding.Views.Menu extends Backbone.View
 
   successTemplate: JST['backbone/templates/alerts/success']
+  errorTemplate: JST['backbone/templates/alerts/error']
 
   events:
     'click a:not(#rsvp)' : 'animateToSection'
@@ -11,6 +12,7 @@ class Wedding.Views.Menu extends Backbone.View
 
   initialize: =>
     @listenTo @model, 'invalid', @renderError
+    @listenTo @model, 'error', @alertError
     @listenTo @model, 'sync', @renderSuccess
     @originalText = @$('input[type=submit]').val()
 
@@ -65,12 +67,20 @@ class Wedding.Views.Menu extends Backbone.View
               @$('.alert').alert('close')
     , 3000
 
+  alertError: =>
+    @removeError()
+    @$('.alertMessage').html @errorTemplate(text: 'There was an error processing your request. Please try again.')
+    _.delay =>
+      @$('.alert').hide().slideDown()
+    , 500
+
   removeError: =>
     _.delay =>
       @_setSubmitText @originalText
     , 500
     @$('input').removeClass('error')
     @$('input').tooltip 'destroy'
+    @$('.alert').alert('close')
 
   clearFields: =>
     _.delay =>
