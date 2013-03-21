@@ -3,10 +3,10 @@
 
 // Form styles
 
-input[type=text], input[type=password], input[type=file] {
-  padding: 15px 10px;
-  width: 300px;
-}
+// input[type=text], input[type=password], input[type=file] {
+//   padding: 15px 10px;
+//   width: 300px;
+// }
 
 input[type=file] {
   font-size: 16px;
@@ -25,17 +25,17 @@ textarea {
   min-height: 40px;
 }
 
-label {
-  width: 200px;
-  font-size: 25px;
-  margin-top: 20px;
-  float: left;
-  margin-right: 20px;
-  text-align: right;
-  &.passConfirm {
-    margin-top: 10px;
-  }
-}
+// label {
+//   width: 200px;
+//   font-size: 25px;
+//   margin-top: 20px;
+//   float: left;
+//   margin-right: 20px;
+//   text-align: right;
+//   &.passConfirm {
+//     margin-top: 10px;
+//   }
+// }
 
 .submit {
   margin-left: 220px;

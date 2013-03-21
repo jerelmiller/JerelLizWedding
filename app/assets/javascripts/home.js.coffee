@@ -1,15 +1,5 @@
 $ ->
-  setMenuLinks()
   setIndicatorWidth()
-
-
-setMenuLinks = =>
-  $('.menu a').click (e) ->
-    e.preventDefault()
-    href = $(@).attr('href')
-    $('html,body').stop().animate({
-      scrollTop: $(href).offset().top - 70
-    }, 1000, 'easeInOutExpo')
 
 setIndicatorWidth = =>
   $indicators = $('.carousel-indicators li')

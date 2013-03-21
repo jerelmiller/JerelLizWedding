@@ -1,7 +1,29 @@
 .header
+  .rsvpContainer.hide
+    .container.clearfix
+      .alertMessage
+      %span.title.left RSVP
+      .right.form
+        %form
+          .field.left
+            %label YOUR NAME:
+            = text_field_tag 'name'
+          .field.left
+            %label # ATTENDING
+            = text_field_tag 'attending'
+          .submit
+            = submit_tag 'Submit &rsaquo;'.html_safe
+        .closeRSVP &times;
   .container
     %ul.menu
       %li= link_to 'HOME', '#home'
       %li= link_to 'OUR STORY', '#ourStory'
       %li= link_to 'PHOTOS', '#photos'
       %li= link_to 'WHEN/WHERE', '#whenWhere'
+      %li= link_to 'RSVP', '#rsvp', id: 'rsvp'
+
+:javascript
+  var menuView = new Wedding.Views.Menu({
+    model: new Wedding.Models.RSVP(),
+    el: '.header'
+  })

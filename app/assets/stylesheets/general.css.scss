@@ -12,9 +12,9 @@
   margin-left: 10px;
 }
 
-.noExtraSpace {
-  @extend %marginPadding0;
-}
+// .noExtraSpace {
+//   @extend %marginPadding0;
+// }
 
 .left {
   float: left;
@@ -24,20 +24,20 @@
   float: right;
 }
 
-.content {
-  position: relative;
-  margin: 0 0 0 280px;
-}
+// .content {
+//   position: relative;
+//   margin: 0 0 0 280px;
+// }
 
-.imageContainer > h1, #blogsContainer > h1 {
-  width: 90%;
-  margin: 100px auto;
-  text-align: center;
-}
+// .imageContainer > h1, #blogsContainer > h1 {
+//   width: 90%;
+//   margin: 100px auto;
+//   text-align: center;
+// }
 
-.ourStory {
-  .body {
-    padding: 20px;
-    font-size: 40px;
-  }
-}
+// .ourStory {
+//   .body {
+//     padding: 20px;
+//     font-size: 40px;
+//   }
+// }

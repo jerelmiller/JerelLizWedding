@@ -31,6 +31,7 @@ gem 'jquery-rails'
 
 group :development do
   gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 group :production do

@@ -6,6 +6,8 @@ Wedding::Application.routes.draw do
 
   root to: 'home#index'
 
+  post '/rsvp' => 'rsvp#create'
+
   namespace :admin do
     resource :users, only: [:edit, :update]
     resources :images, except: [:edit, :show]

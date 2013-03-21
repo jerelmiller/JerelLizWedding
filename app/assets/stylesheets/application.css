@@ -14,6 +14,7 @@
  *= require form
  *= require button
  *= require admin_general
+ *= require general
  *= require new
  *= require_self
  */
