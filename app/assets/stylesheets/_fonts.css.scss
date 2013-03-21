@@ -7,11 +7,11 @@
 $cicle_path: url(Cicle.ttf);
 $comfortaa_light_path: url(Comfortaa-Light.ttf);
 $comfortaa_path: url(Comfortaa-Regular.ttf);
-$eurofurence_light_path: url(eurofurence-light.ttf);
-$eurofurence_path: url(eurofurence.ttf);
-$print_clearly_path: url(PrintClearly.ttf);
-$nexa_path: url(Nexa_Light.otf);
-$nexa_bold_path: url(Nexa_Bold.otf);
+$eurofurence_light_path: url(eurofurence-light.ttf), url(eurofurence-light.woff), url(eurofurence-light.eot), url(eurofurence-light.svg);
+$eurofurence_path: url(eurofurence.ttf), url(eurofurence.woff), url(eurofurence.eot), url(eurofurence.svg);
+$print_clearly_path: url(PrintClearly.ttf), url(PrintClearly.woff), url(PrintClearly.eot), url(PrintClearly.svg);
+$nexa_path: url(Nexa_Light.woff), url(Nexa_Light.ttf), url(Nexa_Light.eot), url(Nexa_Light.svg);
+$nexa_bold_path: url(Nexa_Bold.woff), url(Nexa_Bold.ttf), url(Nexa_Bold.eot), url(Nexa_Bold.svg);
 
 @font-face {
   font-family: Cicle;
