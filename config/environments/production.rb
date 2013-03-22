@@ -61,6 +61,17 @@ Wedding::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = {
+    address:        'smtp.gmail.com',
+    port:           587,
+    domain:         'jerelandliz.com',
+    enable_starttls_auto: true,
+    authentication: :plain,
+    user_name:      ENV['GMAIL_USERNAME'],
+    password:       ENV['GMAIL_PASSWORD']
+  }
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
