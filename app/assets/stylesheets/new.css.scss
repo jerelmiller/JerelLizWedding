@@ -66,14 +66,14 @@ html .clearfix {
 }
 
 .menu {
-  width: 800px;
+  width: 850px;
   list-style-type: none;
   font-size: 21px;
   margin: 0 auto;
   margin-top: 30px;
   li {
     display: inline;
-    margin-left: 103px;
+    margin-left: 80px;
     &:first-child {
       margin-left: 0;
     }
@@ -159,6 +159,15 @@ html .clearfix {
   font-size: 70px;
   font-family: 'Eurofurence Light', Helvetica, Arial, sans-serif;
   // color: $purple;
+  &.link {
+    margin-top: 30px;
+    a {
+      color: $buttonRed !important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
   .groom & {
     margin-left: 26px;
   }
@@ -258,11 +267,20 @@ p {
     font-size: 20px;
     padding: 20px 10px 45px;
 
+    #registry & {
+      text-align: left;
+      margin-top: -20px;
+    }
+
     hr {
       margin: 30px 30px;
       width: 90%;
     }
   }
+}
+
+#registry p {
+  padding: 0 15px;
 }
 
 .inline-block {

@@ -103,6 +103,21 @@
           #receptionMap.map
           .mapControls
 
+.section#registry
+  .wrapper
+    .box
+      .boxTop
+      .center= image_tag 'registry.jpg'
+      .boxBottom
+        .left= link_to image_tag('target.jpg'), registry_link, target: :_blank
+        %p
+          After many trips to Target, we were able to complete our registry. We liked Target because of their variety of choices.
+          We are very excited to put together our new home!
+        %p
+          If you have better gift ideas than the items we picked out, please feel free
+          to go your own route! If there are any questions about color, when in doubt, go with purple, teal, or gray, as we would
+          like to incorporate these into our new home.
+        .title.link.center= link_to 'Go to registry', registry_link, target: :_blank
 
 :javascript
   var ceremonyMap = new Wedding.Models.Map({
