@@ -34,4 +34,16 @@ Wedding::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # allow emails to be sent
+  config.action_mailer.perform_deliveries = true
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :user_name => 'wedding-815cd3bbc6dcced5',
+    :password => '87c6d70b454cac14',
+    :address => 'mailtrap.io',
+    :port => '2525',
+    :authentication => :plain,
+  }
 end
