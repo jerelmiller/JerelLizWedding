@@ -11,7 +11,6 @@ Wedding::Application.routes.draw do
   namespace :admin do
     resource :users, only: [:edit, :update]
     resources :images, except: [:edit, :show]
-    resources :blogs
     root :to => 'admin#index'
   end
 

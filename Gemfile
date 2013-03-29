@@ -6,11 +6,9 @@ gem 'sorcery'
 gem 'paperclip'
 gem 'rmagick'
 gem 'paperclip-dropbox'
-gem 'ckeditor'
 gem 'jbuilder'
 gem 'rails-backbone'
 gem 'thin'
-gem 'haml_coffee_assets'
 gem 'execjs'
 
 

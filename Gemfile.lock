@@ -31,9 +31,6 @@ GEM
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
-    ckeditor (4.0.2)
-      mime-types
-      orm_adapter
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -89,7 +86,6 @@ GEM
       jwt (~> 0.1.4)
       multi_json (~> 1.0)
       rack (~> 1.2)
-    orm_adapter (0.4.0)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -172,7 +168,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ckeditor
   coffee-rails (~> 3.2.1)
   execjs
   haml
