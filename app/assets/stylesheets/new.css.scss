@@ -34,11 +34,19 @@ html .clearfix {
   }
 }
 
+.headerImage {
+  overflow: hidden;
+  img {
+    min-width: 800px;
+    position: relative;
+  }
+}
+
 .menu {
   width: 85%;
   max-width: 850px;
   list-style-type: none;
-  font-size: 21px;
+  font-size: 1.3125em;
   margin: 0 auto;
   margin-top: 30px;
   li {
@@ -126,8 +134,9 @@ html .clearfix {
 }
 
 .title {
-  font-size: 70px;
+  font-size: 4.375em;
   font-family: 'Eurofurence Light', Helvetica, Arial, sans-serif;
+  text-align: center;
   &.link {
     margin-top: 30px;
     a {
@@ -138,18 +147,29 @@ html .clearfix {
     }
   }
   .groom & {
-    margin-left: 26px;
+    // margin-left: 26px;
+    // margin-left: 6.117647%;
+    text-align: center;
   }
   .bride & {
-    margin-left: 70px;
+    // margin-left: 70px;
+    // margin-left: 16.470588%;
+    text-align: center;
   }
   &.small {
-    font-size: 33px;
+    // font-size: 33px;
+    font-size: 2.0625em;
     font-style: italic;
     margin-bottom: -12px;
+    position: relative;
 
     .groom & {
-      margin-left: 83px;
+      // margin-left: 83px;
+      // text-align: center;
+      left: -2.8em
+    }
+    .bride & {
+      left: -3.3em;
     }
   }
   &.center {
@@ -167,11 +187,13 @@ hr {
   float: left;
   .groom & {
     width: 48%;
-    margin-left: 108px;
+    // margin-left: 108px;
+    margin-left: 6em;
   }
   .bride & {
     width: 50%;
-    margin-left: 104px;
+    // margin-left: 104px;
+    margin-left: 5.5em;
   }
 }
 
@@ -180,7 +202,6 @@ hr {
 }
 
 p {
-  font-size: 16px;
   line-height: 24px;
   text-align: justify;
 }
@@ -192,14 +213,16 @@ p {
     background: url(Jdot.jpg);
     background-position: -12px -12px;
     &.inTitle {
-      margin: 34px 0 0 35px;
+      // margin: 34px 0 0 35px;
+      margin: 34px 0 0 8.2353%;
     }
   }
   &.liz {
     background: url(Ldot.jpg);
     background-position: -11px -7px;
     &.inTitle {
-      margin: 34px 35px 0 0;
+      // margin: 34px 35px 0 0;
+      margin: 34px 8.2353% 0 0;
     }
   }
 
@@ -355,5 +378,87 @@ p {
   b {
     font-weight: bold;
     color: darken($buttonRed, 30%);
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .menu {
+    li {
+      // display: inline;
+      margin-left: 5.411765%;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 795px) {
+  .title {
+    font-size: 3.3em;
+
+    &.small {
+      font-size: 1.8em;
+      .groom & {
+        left: -2.3em;
+      }
+      .bride & {
+        left: -2.7em;
+      }
+    }
+  }
+
+  hr {
+    .groom & {
+      margin-left: 5em;
+    }
+    .bride & {
+      margin-left: 4.8em;
+    }
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .menu {
+    font-size: 1.2em;
+    li {
+      margin-left: 4%;
+    }
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .header {
+    padding-bottom: 5px;
+  }
+  .menu {
+    margin: 10px;
+    width: auto;
+    li {
+      display: block;
+      // border: 1px solid black;
+      padding: 5px;
+      border: 1px solid #ccc;
+      margin: 5px 0;
+    }
+  }
+
+  #home {
+    margin-top: 215px;
+  }
+
+  hr {
+    .groom & {
+      margin-left: 6em;
+    }
+    .bride & {
+      margin-left: 5.9em;
+    }
+  }
+
+  .column {
+    float: none;
+    width: 100%;
+    margin: 0;
   }
 }
