@@ -1,32 +1,6 @@
-$purple: #5B3863;
-$offWhite: #EFEFEF;
-$grayColor: #AAA;
-$gray: #3D3D3D;
-
 @import 'fonts';
 @import 'mixins';
 @import 'colors';
-
-html, body {
-  margin: 0;
-  padding: 0;
-  padding-bottom: 30px;
-  font-family: 'Print Clearly', Helvetica, Arial, sans-serif;
-  color: $gray;
-}
-
-ul, ol {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-  &:hover {
-    color: black;
-  }
-}
 
 .clearfix:after {
   content: ".";
@@ -55,19 +29,21 @@ html .clearfix {
   z-index: 999;
   .container {
     margin: 0 auto;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
   }
 }
 
 .menu {
-  width: 850px;
+  width: 85%;
+  max-width: 850px;
   list-style-type: none;
   font-size: 21px;
   margin: 0 auto;
   margin-top: 30px;
   li {
     display: inline;
-    margin-left: 80px;
+    margin-left: 9.411765%;
     &:first-child {
       margin-left: 0;
     }
@@ -131,15 +107,19 @@ html .clearfix {
 
 .section {
   @extend .clearfix;
-  width: 900px;
+  // width: 900px;
+  width: 90%;
+  max-width: 900px;
   margin: 100px auto 0;
   font-family: Nexa, Helvetica, Arial, sans-serif;
 }
 
 .column {
-  width: 425px;
+  // width: 425px;
+  width: 47.222%;
   float: left;
-  margin-left: 50px;
+  // margin-left: 50px;
+  margin-left: 5.555%;
   &:first-child {
     margin-left: 0;
   }
