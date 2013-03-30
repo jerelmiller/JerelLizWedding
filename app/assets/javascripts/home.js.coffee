@@ -22,6 +22,9 @@ calculateHeaderImageSize = =>
   else if windowWidth < 800
     $('#home').css('left', newWidth + 'px');
 
+  if windowWidth == 320
+    $('#home').css('left', -170 + 'px')
+
 
   if windowWidth > 800
     $('#home').removeAttr('style')
